@@ -1,8 +1,3 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<html>
-<head>
-<!--
-
 /**
  * Copyright (c) 2009 Cliffano Subagio
  *
@@ -24,11 +19,44 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
--->
-</head>
-<body bgcolor="white">
+package hudson.plugins.chickennorris;
 
-Provides classes for <a href="https://wiki.jenkins-ci.org/display/JENKINS/ChuckNorris+Plugin">ChuckNorris Plugin</a>.
+import hudson.model.Result;
 
-</body>
-</html>
+/**
+ * This class provides various Chicken Norris' styles.
+ * @author cliffano
+ */
+public enum Style {
+
+    /**
+     * A happy Chicken Norris showing a thumb up.
+     */
+    THUMB_UP,
+    /**
+     * An alert Chicken Norris with a martial arts stance.
+     */
+    ALERT,
+    /**
+     * A total bad ass Chicken Norris ready to give you a good ass whoopin'.
+     */
+    BAD_ASS;
+
+    /**
+     * Gets the style corresponding to the build result.
+     * @param result
+     *            the build result
+     * @return the style
+     */
+    public static final Style get(final Result result) {
+        Style style;
+        if (Result.FAILURE.equals(result)) {
+            style = BAD_ASS;
+        } else if (Result.SUCCESS.equals(result)) {
+            style = THUMB_UP;
+        } else {
+            style = ALERT;
+        }
+        return style;
+    }
+}

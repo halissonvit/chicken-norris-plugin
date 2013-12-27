@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package hudson.plugins.chucknorris;
+package hudson.plugins.chickennorris;
 
 import hudson.model.Action;
 
@@ -70,7 +70,7 @@ public final class RoundhouseAction implements Action {
      * @return the display name
      */
     public String getDisplayName() {
-        return "Chuck Norris";
+        return "Chicken Norris";
     }
 
     /**
@@ -86,11 +86,11 @@ public final class RoundhouseAction implements Action {
      * @return the URL name
      */
     public String getUrlName() {
-        return "chucknorris";
+        return "chickennorris";
     }
 
     /**
-     * Gets the Chuck Norris style.
+     * Gets the Chicken Norris style.
      * @return the style
      */
     public Style getStyle() {
@@ -104,7 +104,7 @@ public final class RoundhouseAction implements Action {
     }
 
     /**
-     * Gets the Chuck Norris fact.
+     * Gets the Chicken Norris fact.
      * @return the fact
      */
     public String getFact() {

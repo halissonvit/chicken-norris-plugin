@@ -1,4 +1,4 @@
-package hudson.plugins.chucknorris;
+package hudson.plugins.chickennorris;
 
 import static org.mockito.Mockito.mock;
 import hudson.model.AbstractProject;
@@ -13,7 +13,7 @@ public class BeardDescriptorTest extends TestCase {
 	}
 
 	public void testGetDisplayName() {
-		assertEquals("Activate Chuck Norris", descriptor.getDisplayName());
+		assertEquals("Activate Chicken Norris", descriptor.getDisplayName());
 	}
 
 	public void testIsApplicableGivesTrue() {
